@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    // function log(){
+    //     alert("Login Successful");
+    //     window.location.href="index.html";
+    // }
+function log(){
+   let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    if(email==="admin@gmail.com" &&  password==="1234"){
+        alert("login Successfull");
+        window.location.href ="index.html"
+    }
+
+    else{
+        alert("Invalid Credentials")
+    }
+}
+</script>
+    
+
+<body>
+
+<section class="login-section">
+  <div class="login">
+    <h2>Login</h2>
+    <input type="email" placeholder="Email" id="email">
+    <input type="password" placeholder="Password" id="password">
+    <button type="button" class="add" onclick="log()">Login</button>
+  </div>
+</section>
+
+
+</body>
+</html>

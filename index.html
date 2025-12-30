@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>StyleMart</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+ <script>
+    
+ function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+
+
+    </script>
+<body>
+   
+<nav class="nav-bar">
+  <h2>StyleMart</h2>
+  <ul class="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="men.html">Men</a></li>
+    <li><a href="women.html">Women</a></li>
+    <li><a href="kids.html">Kids</a></li>
+    <li><a href="cart.html">Cart</a></li>
+  </ul>
+
+  <nav class="navbar">
+  <div class="menu-icon" onclick="toggleMenu()">
+    ☰
+  </div>
+
+  <!-- Menu Links -->
+  <ul class="menu" id="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="men.html">Men</a></li>
+    <li><a href="women.html">Women</a></li>
+    <li><a href="kids.html">Kids</a></li>
+    <li><a href="cart.html">Cart</a></li>
+  </ul>
+</nav>
+</nav>
+
+
+
+<section class="display">
+  <div>
+    <h1>Display Your Style</h1>
+    <p>Fashion for Men, Women & Kids</p>
+    <a href="register.html">
+      <button class="shop-btn">Shop Now</button>
+    </a>
+  </div>
+</section>
+
+<section id="products">
+  <h2 class="Featured">Featured Products</h2>
+
+  <div class="cards">
+    <div class="product-card">
+      <img src="shirt.png">
+      <h3>Men Casual Shirt</h3>
+      <p class="price">₹999</p>
+      <button class="add" onclick="addToCart('Men Casual Shirt',799,'shirt.png')">
+        Add to Cart
+      </button>
+    </div>
+
+    <div class="product-card">
+      <img src="traditional_dress-removebg-preview.png">
+      <h3>Women Dress</h3>
+      <p class="price">₹1499</p>
+      <button class="add" onclick="addToCart('Women Dress',1499,'traditional_dress-removebg-preview.png')">
+        Add to Cart
+      </button>
+    </div>
+  </div>
+</section>
+
+<script src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart</title>
+</head>
+<link rel="stylesheet" href="cart.js">
+
+<link rel="stylesheet" href="style.css">
+<body>
+    
+<nav class="nav-bar">
+  <h2>StyleMart</h2>
+  <ul class="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="men.html">Men</a></li>
+    <li><a href="women.html">Women</a></li>
+    <li><a href="kids.html">Kids</a></li>
+    <li><a href="cart.html">Cart</a></li>
+  </ul>
+  <nav class="navbar">
+  <div class="menu-icon" onclick="toggleMenu()">
+    ☰
+  </div>
+
+  <!-- Menu Links -->
+  <ul class="menu" id="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="men.html">Men</a></li>
+    <li><a href="women.html">Women</a></li>
+    <li><a href="kids.html">Kids</a></li>
+    <li><a href="cart.html">Cart</a></li>
+  </ul>
+</nav>
+
+</nav>
+
+<div style="padding: 20px;"><h2>Your Cart</h2>
+<a href=""><div id="cart"></div></a>
+</div>
+
+<script>
+    
+let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+let cartDiv = document.getElementById("cart");
+
+cart.forEach(item => {
+  let div = document.createElement("div");
+
+  div.innerHTML = `
+    <img src="${item.image}" style="width:120px; display:block; margin-bottom:5px;">
+    <p><b>${item.name}</b></p>
+    <p>₹${item.price}</p>
+    <hr>
+  `;
+
+  cartDiv.appendChild(div);
+  
+});
+
+
+</script>
+<script>
+    sessionStorage.removeItem("cart");
+</script>
+
+</body>
+</html>

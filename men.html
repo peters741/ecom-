@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>StyleMart | Men</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <script>
+    
+ function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
+
+
+    </script>
+<body>
+
+<nav class="nav-bar">
+  <h2>StyleMart</h2>
+  <ul class="list">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="men.html">Men</a></li>
+    <li><a href="women.html">Women</a></li>
+    <li><a href="kids.html">Kids</a></li>
+    <li><a href="cart.html">Cart</a></li>
+  </ul>
+
+  <nav class="navbar">
+  <div class="menu-icon" onclick="toggleMenu()">
+    ☰
+  </div>
+
+  <!-- Menu Links -->
+  <ul class="menu" id="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="men.html">Men</a></li>
+    <li><a href="women.html">Women</a></li>
+    <li><a href="kids.html">Kids</a></li>
+    <li><a href="cart.html">Cart</a></li>
+  </ul>
+</nav>
+</nav>
+
+<section id="products">
+  <h2 class="Featured1">Men's Collection</h2>
+
+  <div class="cards">
+    <div class="product-card">
+      <img src="lightblue.png">
+      <h3>Men Casual Shirt</h3>
+      <p class="price">₹799</p>
+      <button class="add" onclick="addToCart('Men Casual Shirt',799,'lightblue.png')">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="cotton-mens-casual-shirt.png">
+      <h3>Cotton Shirt</h3>
+      <p class="price">₹899</p>
+      <button class="add" onclick="addToCart('Cotton Shirt',899,'cotton-mens-casual-shirt.png')">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <img src="cotton white.png">
+      <h3>Formal white Shirt</h3>
+      <p class="price">₹999</p>
+      <button class="add" onclick="addToCart('Formal Shirt',999,'cotton white.png')">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<script src="cart.js"></script>
+</body>
+</html>
